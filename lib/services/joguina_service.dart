@@ -9,13 +9,12 @@ import 'package:http/http.dart' as http;
 class JoguinaService {
   // URL base de l'API
   static const String baseUrl =
-      'https://ca91f9d499d1c5852783.free.beeceptor.com';
-  //https://ca91f9d499d1c5852783.free.beeceptor.com/api/joguines/
-
+      'https://ca761b9d5ea08abbf0fc.free.beeceptor.com';
+  //https://ca761b9d5ea08abbf0fc.free.beeceptor.com/api/joguina/
   // Obtenir totes les joguines
 
   static Future<List<Joguina>> getJoguines() async {
-    final response = await http.get(Uri.parse('$baseUrl/api/joguines/'));
+    final response = await http.get(Uri.parse('$baseUrl/api/joguina/'));
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);
       List<Joguina> joguines = [];
